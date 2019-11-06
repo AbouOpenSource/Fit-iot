@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B11C1B62355CC3C0053BEEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11C1B52355CC3C0053BEEE /* MapViewController.swift */; };
+		0B7C7A6123559A360066AF2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7A6023559A360066AF2D /* AppDelegate.swift */; };
+		0B7C7A6623559A360066AF2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7A6423559A360066AF2D /* Main.storyboard */; };
+		0B7C7A6823559A370066AF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7A6723559A370066AF2D /* Assets.xcassets */; };
+		0B7C7A6B23559A370066AF2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7A6923559A370066AF2D /* LaunchScreen.storyboard */; };
+		0B7C7A7623559A370066AF2D /* FitIOTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7A7523559A370066AF2D /* FitIOTTests.swift */; };
+		0B7C7A8123559A370066AF2D /* FitIOTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7A8023559A370066AF2D /* FitIOTUITests.swift */; };
+		0B7C7A8F23559DD00066AF2D /* WatchDistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7A8E23559DD00066AF2D /* WatchDistanceViewController.swift */; };
+		0B8E485B2371C3E00026DAB6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8E485A2371C3E00026DAB6 /* libsqlite3.tbd */; };
+		0B8E485D2371C4420026DAB6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E485C2371C4420026DAB6 /* Database.swift */; };
+		0B8E485F2371CB2E0026DAB6 /* Running.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E485E2371CB2E0026DAB6 /* Running.swift */; };
+		0B8E48612371CBBF0026DAB6 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E48602371CBBF0026DAB6 /* Position.swift */; };
+		0B9041D6235EDC1300EEABE3 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9041D5235EDC1300EEABE3 /* Annotation.swift */; };
+		12A66C9D2373569D0011B3C7 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A66C9C2373569D0011B3C7 /* RunningViewController.swift */; };
+		12A66C9F23735A9E0011B3C7 /* RunningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A66C9E23735A9E0011B3C7 /* RunningCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B7C7A7223559A370066AF2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B7C7A5523559A360066AF2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B7C7A5C23559A360066AF2D;
+			remoteInfo = FitIOT;
+		};
+		0B7C7A7D23559A370066AF2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B7C7A5523559A360066AF2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B7C7A5C23559A360066AF2D;
+			remoteInfo = FitIOT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B11C1B52355CC3C0053BEEE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0B7C7A5D23559A360066AF2D /* FitIOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitIOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7C7A6023559A360066AF2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B7C7A6523559A360066AF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B7C7A6723559A370066AF2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B7C7A6A23559A370066AF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B7C7A6C23559A370066AF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B7C7A7123559A370066AF2D /* FitIOTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitIOTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7C7A7523559A370066AF2D /* FitIOTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitIOTTests.swift; sourceTree = "<group>"; };
+		0B7C7A7723559A370066AF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B7C7A7C23559A370066AF2D /* FitIOTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitIOTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7C7A8023559A370066AF2D /* FitIOTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitIOTUITests.swift; sourceTree = "<group>"; };
+		0B7C7A8223559A370066AF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B7C7A8E23559DD00066AF2D /* WatchDistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDistanceViewController.swift; sourceTree = "<group>"; };
+		0B8E485A2371C3E00026DAB6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0B8E485C2371C4420026DAB6 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		0B8E485E2371CB2E0026DAB6 /* Running.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Running.swift; sourceTree = "<group>"; };
+		0B8E48602371CBBF0026DAB6 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		0B9041D5235EDC1300EEABE3 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		12A66C9C2373569D0011B3C7 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
+		12A66C9E23735A9E0011B3C7 /* RunningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B7C7A5A23559A360066AF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B8E485B2371C3E00026DAB6 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B7C7A6E23559A370066AF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B7C7A7923559A370066AF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B7C7A5423559A360066AF2D = {
+			isa = PBXGroup;
+			children = (
+				0B7C7A5F23559A360066AF2D /* FitIOT */,
+				0B7C7A7423559A370066AF2D /* FitIOTTests */,
+				0B7C7A7F23559A370066AF2D /* FitIOTUITests */,
+				0B7C7A5E23559A360066AF2D /* Products */,
+				0B8E48592371C3E00026DAB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0B7C7A5E23559A360066AF2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7A5D23559A360066AF2D /* FitIOT.app */,
+				0B7C7A7123559A370066AF2D /* FitIOTTests.xctest */,
+				0B7C7A7C23559A370066AF2D /* FitIOTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B7C7A5F23559A360066AF2D /* FitIOT */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7A6023559A360066AF2D /* AppDelegate.swift */,
+				0B8E485C2371C4420026DAB6 /* Database.swift */,
+				0B8E48602371CBBF0026DAB6 /* Position.swift */,
+				0B11C1B52355CC3C0053BEEE /* MapViewController.swift */,
+				0B7C7A6423559A360066AF2D /* Main.storyboard */,
+				12A66C9E23735A9E0011B3C7 /* RunningCell.swift */,
+				0B7C7A6723559A370066AF2D /* Assets.xcassets */,
+				0B7C7A6923559A370066AF2D /* LaunchScreen.storyboard */,
+				0B7C7A6C23559A370066AF2D /* Info.plist */,
+				0B7C7A8E23559DD00066AF2D /* WatchDistanceViewController.swift */,
+				12A66C9C2373569D0011B3C7 /* RunningViewController.swift */,
+				0B9041D5235EDC1300EEABE3 /* Annotation.swift */,
+				0B8E485E2371CB2E0026DAB6 /* Running.swift */,
+			);
+			path = FitIOT;
+			sourceTree = "<group>";
+		};
+		0B7C7A7423559A370066AF2D /* FitIOTTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7A7523559A370066AF2D /* FitIOTTests.swift */,
+				0B7C7A7723559A370066AF2D /* Info.plist */,
+			);
+			path = FitIOTTests;
+			sourceTree = "<group>";
+		};
+		0B7C7A7F23559A370066AF2D /* FitIOTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7A8023559A370066AF2D /* FitIOTUITests.swift */,
+				0B7C7A8223559A370066AF2D /* Info.plist */,
+			);
+			path = FitIOTUITests;
+			sourceTree = "<group>";
+		};
+		0B8E48592371C3E00026DAB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B8E485A2371C3E00026DAB6 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B7C7A5C23559A360066AF2D /* FitIOT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B7C7A8523559A370066AF2D /* Build configuration list for PBXNativeTarget "FitIOT" */;
+			buildPhases = (
+				0B7C7A5923559A360066AF2D /* Sources */,
+				0B7C7A5A23559A360066AF2D /* Frameworks */,
+				0B7C7A5B23559A360066AF2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitIOT;
+			productName = FitIOT;
+			productReference = 0B7C7A5D23559A360066AF2D /* FitIOT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B7C7A7023559A370066AF2D /* FitIOTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B7C7A8823559A370066AF2D /* Build configuration list for PBXNativeTarget "FitIOTTests" */;
+			buildPhases = (
+				0B7C7A6D23559A370066AF2D /* Sources */,
+				0B7C7A6E23559A370066AF2D /* Frameworks */,
+				0B7C7A6F23559A370066AF2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B7C7A7323559A370066AF2D /* PBXTargetDependency */,
+			);
+			name = FitIOTTests;
+			productName = FitIOTTests;
+			productReference = 0B7C7A7123559A370066AF2D /* FitIOTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0B7C7A7B23559A370066AF2D /* FitIOTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B7C7A8B23559A370066AF2D /* Build configuration list for PBXNativeTarget "FitIOTUITests" */;
+			buildPhases = (
+				0B7C7A7823559A370066AF2D /* Sources */,
+				0B7C7A7923559A370066AF2D /* Frameworks */,
+				0B7C7A7A23559A370066AF2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B7C7A7E23559A370066AF2D /* PBXTargetDependency */,
+			);
+			name = FitIOTUITests;
+			productName = FitIOTUITests;
+			productReference = 0B7C7A7C23559A370066AF2D /* FitIOTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B7C7A5523559A360066AF2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "sanou abou";
+				TargetAttributes = {
+					0B7C7A5C23559A360066AF2D = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					0B7C7A7023559A370066AF2D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 0B7C7A5C23559A360066AF2D;
+					};
+					0B7C7A7B23559A370066AF2D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 0B7C7A5C23559A360066AF2D;
+					};
+				};
+			};
+			buildConfigurationList = 0B7C7A5823559A360066AF2D /* Build configuration list for PBXProject "FitIOT" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B7C7A5423559A360066AF2D;
+			productRefGroup = 0B7C7A5E23559A360066AF2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B7C7A5C23559A360066AF2D /* FitIOT */,
+				0B7C7A7023559A370066AF2D /* FitIOTTests */,
+				0B7C7A7B23559A370066AF2D /* FitIOTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B7C7A5B23559A360066AF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7C7A6B23559A370066AF2D /* LaunchScreen.storyboard in Resources */,
+				0B7C7A6823559A370066AF2D /* Assets.xcassets in Resources */,
+				0B7C7A6623559A360066AF2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B7C7A6F23559A370066AF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B7C7A7A23559A370066AF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B7C7A5923559A360066AF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B8E485D2371C4420026DAB6 /* Database.swift in Sources */,
+				0B7C7A6123559A360066AF2D /* AppDelegate.swift in Sources */,
+				0B8E485F2371CB2E0026DAB6 /* Running.swift in Sources */,
+				0B11C1B62355CC3C0053BEEE /* MapViewController.swift in Sources */,
+				0B9041D6235EDC1300EEABE3 /* Annotation.swift in Sources */,
+				12A66C9F23735A9E0011B3C7 /* RunningCell.swift in Sources */,
+				0B8E48612371CBBF0026DAB6 /* Position.swift in Sources */,
+				12A66C9D2373569D0011B3C7 /* RunningViewController.swift in Sources */,
+				0B7C7A8F23559DD00066AF2D /* WatchDistanceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B7C7A6D23559A370066AF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7C7A7623559A370066AF2D /* FitIOTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B7C7A7823559A370066AF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7C7A8123559A370066AF2D /* FitIOTUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B7C7A7323559A370066AF2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B7C7A5C23559A360066AF2D /* FitIOT */;
+			targetProxy = 0B7C7A7223559A370066AF2D /* PBXContainerItemProxy */;
+		};
+		0B7C7A7E23559A370066AF2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B7C7A5C23559A360066AF2D /* FitIOT */;
+			targetProxy = 0B7C7A7D23559A370066AF2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0B7C7A6423559A360066AF2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B7C7A6523559A360066AF2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B7C7A6923559A370066AF2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B7C7A6A23559A370066AF2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B7C7A8323559A370066AF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B7C7A8423559A370066AF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B7C7A8623559A370066AF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitIOT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AbouOpenSource.FitIOT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B7C7A8723559A370066AF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitIOT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AbouOpenSource.FitIOT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B7C7A8923559A370066AF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitIOTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AbouOpenSource.FitIOTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitIOT.app/FitIOT";
+			};
+			name = Debug;
+		};
+		0B7C7A8A23559A370066AF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitIOTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AbouOpenSource.FitIOTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitIOT.app/FitIOT";
+			};
+			name = Release;
+		};
+		0B7C7A8C23559A370066AF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitIOTUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AbouOpenSource.FitIOTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FitIOT;
+			};
+			name = Debug;
+		};
+		0B7C7A8D23559A370066AF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitIOTUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AbouOpenSource.FitIOTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FitIOT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B7C7A5823559A360066AF2D /* Build configuration list for PBXProject "FitIOT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B7C7A8323559A370066AF2D /* Debug */,
+				0B7C7A8423559A370066AF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B7C7A8523559A370066AF2D /* Build configuration list for PBXNativeTarget "FitIOT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B7C7A8623559A370066AF2D /* Debug */,
+				0B7C7A8723559A370066AF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B7C7A8823559A370066AF2D /* Build configuration list for PBXNativeTarget "FitIOTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B7C7A8923559A370066AF2D /* Debug */,
+				0B7C7A8A23559A370066AF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B7C7A8B23559A370066AF2D /* Build configuration list for PBXNativeTarget "FitIOTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B7C7A8C23559A370066AF2D /* Debug */,
+				0B7C7A8D23559A370066AF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B7C7A5523559A360066AF2D /* Project object */;
+}
