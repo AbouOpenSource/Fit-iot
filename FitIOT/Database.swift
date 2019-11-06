@@ -18,11 +18,6 @@ class Database{
     
     let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
         .appendingPathComponent("Database.sqlite")
-    
-   
-    
-    
-    
     func openDatabase() -> Bool {
         
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
@@ -35,7 +30,7 @@ class Database{
     
     func createTable(){
         
-        if sqlite3_exec(db, "CREATE TABLE runnings ( id INTEGER PRIMARY KEY AUTOINCREMENT,time TEXT,distance TEXT)", nil, nil, nil) != SQLITE_OK {
+        if sqlite3_exec(db, "CREATE TABLE runnings ( id INTEGER PRIMARY KEY AUTOINCREMENT,time TEXT,distance TEXT, letemps TEXT )", nil, nil, nil) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error creating table: \(errmsg)")
         }
@@ -75,10 +70,12 @@ class Database{
             return
         }
         
+        
+        
     }
     
     
-    func addPosition(position: Position,idrunning: Int){
+    func addPosition(position: Position, idrunning: Int){
          let queryString = "INSERT INTO positions (longitude, latitude, runningsid) VALUES (?,?,?)"
          if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
@@ -136,9 +133,9 @@ class Database{
             let id = sqlite3_column_int(stmtRead, 0)
             let time = String(cString: sqlite3_column_text(stmtRead, 1))
             let distance = String(cString: sqlite3_column_text(stmtRead, 2))
-            
+            let dateTime = String(cString: sqlite3_column_text(stmtRead, 3))
             //adding values to list
-            runList.append(Running(id: Int(id) ,time: time, distance: distance))
+            runList.append(Running(id: Int(id) ,time: time, distance: distance, dateTime: dateTime))
         }
         
     return runList
@@ -170,7 +167,32 @@ class Database{
         return id
     }
     
+    func getLastNumberRunning() -> Int {
+        var id :Int = 0
+        var runList = [Running]()
+        runList.removeAll()
         
+        //this is our select query
+        let queryString = "SELECT MAX(id) FROM runnings"
+        
+        //statement pointer
+        var stmtRead:OpaquePointer?
+        
+        //preparing the query
+        if sqlite3_prepare(db, queryString, -1, &stmtRead, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return id
+        }
+        
+        //traversing through all the records
+        while(sqlite3_step(stmtRead) == SQLITE_ROW){
+            id = Int(sqlite3_column_int(stmtRead, 0))
+            
+        }
+        
+        return id
+    }
         
     }
 

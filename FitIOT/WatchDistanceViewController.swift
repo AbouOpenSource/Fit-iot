@@ -35,7 +35,7 @@ class WatchDistanceViewController: UIViewController, CLLocationManagerDelegate
     var counter = 0.0
     override func viewDidLoad() {
          db.openDatabase()
-        // db.createTable()
+         //db.createTable()
         
     
         
@@ -119,8 +119,32 @@ class WatchDistanceViewController: UIViewController, CLLocationManagerDelegate
     
     @IBAction func saveDidTap(_ sender: Any) {
       let item = Running(time: String(counter),distance: String(distance))
-       // db.addRunning(running: item)
-        db.addRunning(running: item)
+        if counter == 0.0 {
+            // pop up no thing
+        }
+        else{
+            db.addRunning(running: item)
+            let id = db.getLastNumberRunning()
+            
+            // to store different data in the sqlite db
+            var i: Int = 0
+            while i < tableauxCLLOcation.count {
+                db.addPosition(position: Position(latitude: String(tableauxCLLOcation[i].coordinate.latitude),longitude :String(tableauxCLLOcation[i].coordinate.longitude) ), idrunning: id)
+                i = i + 1
+            }
+            
+            counter = 0.0
+            distance = 0.0
+            tableauxCLLOcation = []
+            startButton.setTitle("Stop", for: .normal)
+            startButton.isHidden=true
+            resumeButton.isHidden=false
+            saveButton.isHidden=false
+            distanceLabel.text = "0.00"
+            timerLabel.text = "00:00:00.0"
+            
+        }
+        
         
     }
     

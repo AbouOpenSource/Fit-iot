@@ -52,7 +52,7 @@ class RunningViewController: UITableViewController {
         //!
         let running = runnings[indexPath.row]
         //print(indexPath.row)
-        cell.idLabel.text = "01"
+        cell.idLabel.text = running.dateTime
         cell.distanceLabel.text = running.distance
         cell.timeLabel.text = running.time
        
