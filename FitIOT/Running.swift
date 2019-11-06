@@ -9,11 +9,16 @@
 import Foundation
 
 class Running {
-   
-    var time: String
-    var distance: String
+    
+    var id: Int!
+    var time: String!
+    var distance: String!
     
     init(time: String, distance: String) {
+        self.time = time
+        self.distance = distance
+    }
+    init(id: Int,time: String, distance: String) {
         self.time = time
         self.distance = distance
     }

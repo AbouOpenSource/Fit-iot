@@ -1,4 +1,4 @@
-//
+
 //  RunningViewController.swift
 //  FitIOT
 //
@@ -9,6 +9,8 @@
 import UIKit
 
 class RunningViewController: UITableViewController {
+    
+    
     var db = Database()
     //var runList: [Running] = []
     var runnings = [Running]()
@@ -16,7 +18,8 @@ class RunningViewController: UITableViewController {
         super.viewDidLoad()
         db.openDatabase()
         runnings = db.getAllRunning()
-        print(db.getNumberRunning())
+        //print(runnings[0].time)
+       // print(db.getNumberRunning())
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,30 +37,28 @@ class RunningViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return 0
+        //print(runnings.count)
         return runnings.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "identifiantCellule"
-        //let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-
-        
+        let cellIdentifier = "runningIdentifiant"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RunningCell
+        /*
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RunningCell  else {
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
-        }
-        
+        }*/
+        //!
         let running = runnings[indexPath.row]
+        //print(indexPath.row)
+        cell.idLabel.text = "01"
+        cell.distanceLabel.text = running.distance
+        cell.timeLabel.text = running.time
+       
         
-        //cell.distanceLabel.text = running.distance
-        //cell.timeLabel.text = running.time
         
-        cell.distanceLabel.text = "salut"
-        cell.timeLabel.text = "salut"
-        
-        
-        // Configure the cell...
-
+        // print(running.distance)
         return cell
     }
     

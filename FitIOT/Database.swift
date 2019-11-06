@@ -48,8 +48,10 @@ class Database{
  }
 
     func addRunning(running: Running){
-         let queryString = "INSERT INTO runnings (distance, time) VALUES (?,?)"
-         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+         //let queryString = "INSERT INTO runnings (distance, time) VALUES (?,?)"
+        let queryString = "INSERT INTO runnings (distance, time, letemps) VALUES (?,?,datetime('now'))"
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
             return
@@ -131,12 +133,12 @@ class Database{
         
         //traversing through all the records
         while(sqlite3_step(stmtRead) == SQLITE_ROW){
-           // let id = sqlite3_column_int(stmtRead, 0)
+            let id = sqlite3_column_int(stmtRead, 0)
             let time = String(cString: sqlite3_column_text(stmtRead, 1))
             let distance = String(cString: sqlite3_column_text(stmtRead, 2))
             
             //adding values to list
-            runList.append(Running(time: String(describing: time), distance: distance))
+            runList.append(Running(id: Int(id) ,time: time, distance: distance))
         }
         
     return runList
