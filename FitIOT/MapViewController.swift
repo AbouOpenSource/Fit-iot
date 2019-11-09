@@ -11,18 +11,20 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate{
     
-   
+    var db = Database()
     @IBOutlet weak var mapView: MKMapView!
     
     
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         mapView.delegate=self
         locationManager.delegate = self
-locationManager.desiredAccuracy=kCLLocationAccuracyBest
+        locationManager.desiredAccuracy=kCLLocationAccuracyBest
         retriveCurrentLocation()
+        print(myIndex)
     }
     
     
@@ -68,8 +70,6 @@ locationManager.desiredAccuracy=kCLLocationAccuracyBest
         let coordinateRegion = MKCoordinateRegion(center: coordinate,
                                                   latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(coordinateRegion, animated: true)
-        
-        
         mapView.addOverlay(route)
     }
     
@@ -99,23 +99,12 @@ extension MapViewController: CLLocationManagerDelegate{
         // .requestLocation will only pass one location to the locations array
         // hence we can access it by taking the first element of the array
         if let location = locations.last {
-            print("\(location.coordinate.latitude)")
-            print("\(location.coordinate.longitude)")
+            //print("\(location.coordinate.latitude)")
+            //print("\(location.coordinate.longitude)")
             updateMap(with: location.coordinate)
         }
         
-     /*
-        if locations.count  >= 2 {
-                let loc = CLLocationCoordinate2D(latitude: locations  [locations.endIndex-1].coordinate.latitude, longitude:locations  [locations.endIndex-1].coordinate.longitude)
-                
-                let locc=CLLocationCoordinate2D(latitude: locations  [locations.endIndex].coordinate.latitude, longitude:locations  [locations.endIndex].coordinate.longitude)
-               
-                let routeLine = MKPolyline(coordinates: [ loc , locc ] , count:2)
-                self.mapView.addOverlay(routeLine)
-               // updateMap(with:locations[locations.endIndex-1].coordinate,route: routeLine)
-            }
-       */
-   
+     
         
     }
     
@@ -127,10 +116,7 @@ extension MapViewController: CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // might be that user didn't enable location service on the device
-        // or there might be no GPS signal inside a building
         
-        // might be a good idea to show an alert to user to ask them to walk to a place with GPS signal
     }
   
     

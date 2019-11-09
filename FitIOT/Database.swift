@@ -140,6 +140,8 @@ class Database{
         
     return runList
     }
+    
+    
     func getNumberRunning() -> Int {
         var id :Int = 0
         var runList = [Running]()
@@ -194,5 +196,46 @@ class Database{
         return id
     }
         
+
+    func getAllPositions(idRunning: Int ) -> [Position] {
+        var posList = [Position]()
+        posList.removeAll()
+        
+        //this is our select query
+        let queryString = "SELECT * FROM positions where idrunning = ?"
+        
+        //statement pointer
+        var stmtRead:OpaquePointer?
+        
+        //preparing the query
+        if sqlite3_prepare(db, queryString, -1, &stmtRead, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return []
+        }
+        
+        if sqlite3_bind_int(stmt, 3, Int32(idRunning)) != SQLITE_OK
+        {
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding name: \(errmsg)")
+            return []
+        }
+        
+        
+        
+        
+        //traversing through all the records
+        while(sqlite3_step(stmtRead) == SQLITE_ROW){
+            let id = sqlite3_column_int(stmtRead, 0)
+            let longitude = String(cString: sqlite3_column_text(stmtRead, 1))
+            let latitude = String(cString: sqlite3_column_text(stmtRead, 2))
+            
+            //adding values to list
+            posList.append(Position(id: Int(id) , latitude: latitude, longitude: longitude))
+        }
+        
+        return posList
     }
+
+}
 
